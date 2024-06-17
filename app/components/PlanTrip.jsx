@@ -3,7 +3,7 @@ import React from "react";
 
 const PlanTrip = () => {
   return (
-    <section className="bg-white py-20">
+    <section className="max-container bg-white py-20">
       <div className="mx-auto p-10 max-w-[133rem]">
         <div className="flex flex-col">
           <div className="text-center text-black">
