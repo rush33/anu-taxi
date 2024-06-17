@@ -45,49 +45,49 @@ const ReviewCard = ({ content, username }) => {
 };
 
 const Reviews = () => {
-   var settings = {
-     dots: true,
-     infinite: false,
-     speed: 500,
-     slidesToShow: 2,
-     slidesToScroll: 1,
-     initialSlide: 0,
-     responsive: [
-       {
-         breakpoint: 1024,
-         settings: {
-           slidesToShow: 1,
-           slidesToScroll: 1,
-           initialSlide: 0,
-           infinite: true,
-           dots: true,
-         },
-       },
-       {
-         breakpoint: 600,
-         settings: {
-           slidesToShow: 1,
-           slidesToScroll: 1,
-           initialSlide: 0,
-           infinite: true,
-           dots: true,
-         },
-       },
-       {
-         breakpoint: 480,
-         settings: {
-           slidesToShow: 1,
-           slidesToScroll: 1,
-           initialSlide: 0,
-           infinite: true,
-           dots: true,
-         },
-       },
-     ],
-   };
+  var settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 0,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 0,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 0,
+          infinite: true,
+          dots: true,
+        },
+      },
+    ],
+  };
 
   return (
-    <section className="border-2 border-red-400 max-container bg-white py-10">
+    <section className="max-container bg-white py-10">
       <div className="mx-auto p-10 max-w-[133rem]">
         <div className="flex flex-col">
           <div className="text-center text-black">
