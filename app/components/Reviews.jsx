@@ -1,10 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import { REVIEWS } from "./../constants/index";
+import Button from "./Button";
+import Slider from "react-slick";
 
 const ReviewCard = ({ content, username }) => {
   return (
-    <div className="bg-green-50 m-4 p-8 lg:max-w-[450px] xl:max-w-[734px] xl:rounded-5xl xl:px-14 xl:py-16 w-full relative overflow-hidden rounded-3xl">
+    <div className=" bg-green-50 p-8 lg:max-w-[450px] xl:max-w-[734px] xl:rounded-5xl xl:px-14 xl:py-16 w-full relative overflow-hidden rounded-3xl">
       <div className="flexCenter flex items-center gap-3 mb-3">
         {Array(5)
           .fill(1)
@@ -41,6 +45,47 @@ const ReviewCard = ({ content, username }) => {
 };
 
 const Reviews = () => {
+   var settings = {
+     dots: true,
+     infinite: false,
+     speed: 500,
+     slidesToShow: 2,
+     slidesToScroll: 1,
+     initialSlide: 0,
+     responsive: [
+       {
+         breakpoint: 1024,
+         settings: {
+           slidesToShow: 1,
+           slidesToScroll: 1,
+           initialSlide: 0,
+           infinite: true,
+           dots: true,
+         },
+       },
+       {
+         breakpoint: 600,
+         settings: {
+           slidesToShow: 1,
+           slidesToScroll: 1,
+           initialSlide: 0,
+           infinite: true,
+           dots: true,
+         },
+       },
+       {
+         breakpoint: 480,
+         settings: {
+           slidesToShow: 1,
+           slidesToScroll: 1,
+           initialSlide: 0,
+           infinite: true,
+           dots: true,
+         },
+       },
+     ],
+   };
+
   return (
     <section className="max-container bg-white py-20">
       <div className="mx-auto p-10 max-w-[133rem]">
@@ -51,14 +96,25 @@ const Reviews = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row">
+      {/* <div className="flex flex-col lg:flex-row"> */}
+      <Slider {...settings}>
         {REVIEWS.map((item, index) => (
           <ReviewCard
             key={index}
+            f
             content={item.content}
             username={item.username}
           />
         ))}
+      </Slider>
+      {/* </div> */}
+      <div className="flexCenter mt-6">
+        <Button
+          title="Check out all reviews"
+          icon="/right-arrow.svg"
+          type="button"
+          variant="btn_white_text"
+        />
       </div>
     </section>
   );

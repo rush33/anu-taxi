@@ -14,6 +14,16 @@ body {
   font-family: Inter;
 }
 
+.slick-slide > div {
+  margin: 0 1.25rem; /* Default margin for screens below 1024px */
+}
+
+@media (min-width: 1024px) {
+  .slick-slide > div {
+    margin: 0 5rem; /* Margin for screens 1024px and up */
+  }
+}
+
 @layer utilities {
   .btn_white {
     @apply border-white bg-white px-8 py-3 text-green-50;
