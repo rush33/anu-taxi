@@ -87,7 +87,7 @@ const Reviews = () => {
    };
 
   return (
-    <section className="max-container bg-white py-20">
+    <section className="border-2 border-red-400 max-container bg-white py-10">
       <div className="mx-auto p-10 max-w-[133rem]">
         <div className="flex flex-col">
           <div className="text-center text-black">
