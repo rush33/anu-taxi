@@ -114,6 +114,12 @@ const Reviews = () => {
           icon="/right-arrow.svg"
           type="button"
           variant="btn_white_text"
+          onClick={() =>
+            window.open(
+              "https://www.google.com/maps/place/Anu+Tour+and+Taxi+Guwahati+Assam+Tawang+Shillong+Kaziranga/@26.1439863,91.6908423,17z/data=!4m8!3m7!1s0x375a5ba25e1a274b:0xcfd2a2a9fc282955!8m2!3d26.1439815!4d91.6934226!9m1!1b1!16s%2Fg%2F11tjmg0jtd?entry=ttu",
+              "_blank"
+            )
+          }
         />
       </div>
     </section>
