@@ -5,10 +5,18 @@ export const NAV_LINKS = [
   { href: "/", key: "home", label: "Home" },
   { href: "/", key: "reviews", label: "Reviews" },
   { href: "/", key: "services", label: "Plan a Trip With Us" },
-  { href: "/", key: "about", label: "About" },
+  { href: "/", key: "reach_us", label: "Reach Us" },
 ];
 
 export const REVIEW_COUNT = 54;
+export const PHONE_NUMBER = 847307038;
+export const WHATSAPP_NUMBER = 9401059304;
+export const WHATSAPP_MESSAGE = "I would like to book a taxi.";
+export const HERO_TITLE = "Save big with our car rental";
+export const HERO_SUBTITLE =
+  "Rent the car of your dreams. Unbeatable prices, unlimited miles, flexible pick-up options and much more.";
+export const ADDRESS =
+  "Maligaon, Gosala, Pub Madhabdeb Nagar, Guwahati, Assam. PIN: 781011";
 
 export const REVIEWS = [
   {
@@ -37,3 +45,43 @@ export const REVIEWS = [
       "I was traveling solo for first time, my luck i got Anu tours and travels. The owner booked all hotels for me, took me to pure veg hotels, literally did trekking with me on high hills. Just close your eyes and book. You will have joyful memories. Very responsible, humble, caring person he is ….🙏🏻 Thanks a lot 😇",
   },
 ];
+
+export const FOOTER_LINKS = [
+  {
+    title: "Learn More",
+    links: [
+      "About Hilink",
+      "Press Releases",
+      "Environment",
+      "Jobs",
+      "Privacy Policy",
+      "Contact Us",
+    ],
+  },
+  {
+    title: "Our Community",
+    links: ["Climbing xixixi", "Hiking hilink", "Hilink kinthill"],
+  },
+];
+
+export const FOOTER_CONTACT_INFO = {
+  title: "Contact Us",
+  links: [
+    { label: "Joydeb Das", value: `${PHONE_NUMBER}, ${WHATSAPP_NUMBER}` },
+    {
+      label: "Address",
+      value: `${ADDRESS}`,
+    },
+    { label: "Email", value: "aowjoydeb@gmail.com" },
+  ],
+};
+
+export const SOCIALS = {
+  title: "Social",
+  links: ["/facebook.svg", "/instagram.svg", "/whatsapp.svg"],
+};
+
+export const INSTAGRAM =
+  "https://www.instagram.com/anutourandtaxi?igsh=MW05eG5qYTZoNno0Mw==";
+
+// ## SSS SAFETY SECURITY SUSTAINABILITY 
