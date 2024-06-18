@@ -1,6 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
-import { NAV_LINKS } from "../constants";
+import { NAV_LINKS, PHONE_NUMBER } from "../constants";
 import Image from "next/image";
 import Button from "./Button";
 
@@ -29,6 +31,7 @@ const NavBar = () => {
           title="Book A Ride"
           icon="/user.svg"
           variant="btn_dark_green"
+          onClick={() => (window.location.href = `tel:${PHONE_NUMBER}`)}
         />
       </div>
 
