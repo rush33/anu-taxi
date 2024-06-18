@@ -17,6 +17,8 @@ export const HERO_SUBTITLE =
   "Rent the car of your dreams. Unbeatable prices, unlimited miles, flexible pick-up options and much more.";
 export const ADDRESS =
   "Maligaon, Gosala, Pub Madhabdeb Nagar, Guwahati, Assam. PIN: 781011";
+export const GOOGLE_MAPS_REVIEW =
+  "https://www.google.com/maps/place/Anu+Tour+and+Taxi+Guwahati+Assam+Tawang+Shillong+Kaziranga/@26.1439863,91.6908423,17z/data=!4m8!3m7!1s0x375a5ba25e1a274b:0xcfd2a2a9fc282955!8m2!3d26.1439815!4d91.6934226!9m1!1b1!16s%2Fg%2F11tjmg0jtd?entry=ttu";
 
 export const REVIEWS = [
   {
