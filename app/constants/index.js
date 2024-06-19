@@ -9,7 +9,7 @@ export const NAV_LINKS = [
 ];
 
 export const REVIEW_COUNT = 54;
-export const PHONE_NUMBER = +918473070328;
+export const PHONE_NUMBER = 8473070328;
 export const WHATSAPP_NUMBER = 919401059304;
 export const WHATSAPP_MESSAGE = "I would like to book a taxi.";
 export const INSTAGRAM = "https://www.instagram.com/anutourandtaxi";
