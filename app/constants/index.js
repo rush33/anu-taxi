@@ -70,7 +70,7 @@ export const FOOTER_LINKS = [
 export const FOOTER_CONTACT_INFO = {
   title: "Contact Us",
   links: [
-    { label: "Joydeb Das", value: `${PHONE_NUMBER}, ${WHATSAPP_NUMBER}` },
+    { label: "Joydeb Das", value: "8473070328, 9401059304" },
     {
       label: "Address",
       value: `${ADDRESS}`,
