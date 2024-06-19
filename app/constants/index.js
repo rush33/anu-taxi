@@ -9,7 +9,7 @@ export const NAV_LINKS = [
 ];
 
 export const REVIEW_COUNT = 54;
-export const PHONE_NUMBER = 847307038;
+export const PHONE_NUMBER = 8473070328;
 export const WHATSAPP_NUMBER = 9401059304;
 export const WHATSAPP_MESSAGE = "I would like to book a taxi.";
 export const HERO_TITLE = "Save big with our car rental";
