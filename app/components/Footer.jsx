@@ -38,9 +38,9 @@ const Footer = () => {
               <FooterColumn title={SOCIALS.title}>
                 <ul className="regular-14 flex gap-4 text-gray-30">
                   {SOCIALS.sites.map((site) => (
-                    <Link href={site.href} key={site.link}>
+                    <Link href={site.href} key={site.link} target="_blank">
                       <Image
-                        src={site.link}
+                        src={site.icon}
                         alt="logo"
                         width={24}
                         height={24}
