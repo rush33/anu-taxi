@@ -20,16 +20,19 @@ const Footer = () => {
             <div className="flex flex-col gap-5">
               <FooterColumn title={FOOTER_CONTACT_INFO.title}>
                 {FOOTER_CONTACT_INFO.links.map((link) => (
-                  <Link
-                    href="/"
+                  <div
                     key={link.label}
                     className="flex gap-4 md:flex-col lg:flex-row"
                   >
                     <p className="whitespace-nowrap">{link.label}:</p>
                     <p className="medium-14 break-words w-full text-blue-70">
-                      {link.value}
+                      {link.label === "Email" ? (
+                        <a href={`mailto:${link.value}`}>{link.value}</a>
+                      ) : (
+                        link.value
+                      )}
                     </p>
-                  </Link>
+                  </div>
                 ))}
               </FooterColumn>
             </div>
