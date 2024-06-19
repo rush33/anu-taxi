@@ -29,19 +29,19 @@ const NavBar = () => {
         <Button
           type="button"
           title="Book A Ride"
-          icon="/user.svg"
+          icon="/call.svg"
           variant="btn_dark_green"
           onClick={() => (window.location.href = `tel:${PHONE_NUMBER}`)}
         />
       </div>
 
-      <Image
+      {/* <Image
         src="menu.svg"
         alt="menu"
         width={32}
         height={32}
         className="inline-block cursor-pointer lg:hidden"
-      />
+      /> */}
     </nav>
   );
 };
