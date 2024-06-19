@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Anu Tours and Taxi",
-  description: "Anu Tours and Taxi by Rushad and Anuran",
+  description: "Arunachal & Meghalaya taxi service from Guwahati",
 };
 
 export default function RootLayout({ children }) {
