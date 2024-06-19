@@ -9,9 +9,10 @@ export const NAV_LINKS = [
 ];
 
 export const REVIEW_COUNT = 54;
-export const PHONE_NUMBER = 8473070328;
-export const WHATSAPP_NUMBER = 9401059304;
+export const PHONE_NUMBER = +918473070328;
+export const WHATSAPP_NUMBER = 919401059304;
 export const WHATSAPP_MESSAGE = "I would like to book a taxi.";
+export const INSTAGRAM = "https://www.instagram.com/anutourandtaxi";
 export const HERO_TITLE = "Save big with our car rental";
 export const HERO_SUBTITLE =
   "Rent the car of your dreams. Unbeatable prices, unlimited miles, flexible pick-up options and much more.";
@@ -80,10 +81,16 @@ export const FOOTER_CONTACT_INFO = {
 
 export const SOCIALS = {
   title: "Social",
-  links: ["/facebook.svg", "/instagram.svg", "/whatsapp.svg"],
+  sites: [
+    {
+      link: "/instagram.svg",
+      href: INSTAGRAM,
+    },
+    {
+      link: "/whatsapp.svg",
+      href: `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`,
+    },
+  ],
 };
 
-export const INSTAGRAM =
-  "https://www.instagram.com/anutourandtaxi?igsh=MW05eG5qYTZoNno0Mw==";
-
-// ## SSS SAFETY SECURITY SUSTAINABILITY 
+// ## SSS SAFETY SECURITY SUSTAINABILITY
