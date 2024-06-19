@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="flexCenter mb-24">
       <div className="padding-container max-container flex w-full flex-col gap-14">
-        <div className=" flex flex-col items-start justify-center gap-[10%] md:flex-row">
+        <div className="flex flex-col items-start justify-center gap-[10%] md:flex-row">
           <div className="flex flex-wrap gap-6 sm:justify-between md:flex-1">
             <div className="rounded-2xl overflow-hidden">
               <iframe
@@ -26,7 +26,7 @@ const Footer = () => {
                     className="flex gap-4 md:flex-col lg:flex-row"
                   >
                     <p className="whitespace-nowrap">{link.label}:</p>
-                    <p className="medium-14 whitespace-nowrap text-blue-70">
+                    <p className="medium-14 break-words w-full text-blue-70">
                       {link.value}
                     </p>
                   </Link>
@@ -34,7 +34,7 @@ const Footer = () => {
               </FooterColumn>
             </div>
 
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col">
               <FooterColumn title={SOCIALS.title}>
                 <ul className="regular-14 flex gap-4 text-gray-30">
                   {SOCIALS.sites.map((site) => (
@@ -42,8 +42,8 @@ const Footer = () => {
                       <Image
                         src={site.icon}
                         alt="logo"
-                        width={24}
-                        height={24}
+                        width={30}
+                        height={30}
                       />
                     </Link>
                   ))}
