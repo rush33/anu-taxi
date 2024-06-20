@@ -76,15 +76,15 @@ export const SOCIALS = {
   title: "Social",
   sites: [
     {
-      icon: "/instagram.svg",
+      icon: "/instagram-colored.svg",
       href: INSTAGRAM,
     },
     {
-      icon: "/whatsapp.svg",
+      icon: "/whatsapp-colored.svg",
       href: `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`,
     },
     {
-      icon: "/gmaps.svg",
+      icon: "/google-maps-colored.svg",
       href: GOOGLE_MAPS,
     },
   ],

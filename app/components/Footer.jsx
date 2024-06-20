@@ -6,7 +6,7 @@ import { FOOTER_CONTACT_INFO, SOCIALS } from "../constants";
 const Footer = () => {
   return (
     <footer className="flexCenter mb-24">
-      <div className="padding-container max-container flex w-full flex-col gap-14">
+    <div className="padding-container max-container flex w-full flex-col gap-14">
         <div className="flex flex-col items-start justify-center gap-[10%] md:flex-row">
           <div className="flex flex-wrap gap-6 sm:justify-between md:flex-1">
             <div className="rounded-2xl overflow-hidden">
