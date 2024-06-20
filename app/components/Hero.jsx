@@ -29,7 +29,7 @@ const Hero = () => {
           height={50}
         /> */}
 
-        <h1 className="bold-52 lg:bold-88">{HERO_TITLE}</h1>
+        <h1 className="bold-40 lg:bold-64">{HERO_TITLE}</h1>
         <p className="regular-16 mt-6 text-gray-30 xl:max-w-[520px]">
           {HERO_SUBTITLE}
         </p>
