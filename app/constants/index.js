@@ -8,9 +8,16 @@ export const NAV_LINKS = [
 
 //CONTENT
 export const REVIEW_COUNT = 54;
-export const HERO_TITLE = "Affordable Car Rentals in Guwahati – Save Big with Anu Tour and Taxi";
+export const HERO_TITLE =
+  "Affordable Car Rentals in Guwahati – Save Big with Anu Tour and Taxi";
 export const HERO_SUBTITLE =
-"Discover the best of Arunachal Pradesh, and Meghalaya with Anu Tour and Taxi. We offer top-notch tour and taxi services in Guwahati. Explore destinations like Tawang and Shillong with ease. Choose us for an unforgettable travel experience. Satisfaction guaranteed!";
+  "Discover the best of Arunachal Pradesh, and Meghalaya with Anu Tour and Taxi. We offer top-notch tour and taxi services in Guwahati. Explore destinations like Tawang and Shillong with ease. Choose us for an unforgettable travel experience. Satisfaction guaranteed!";
+export const META_TITLE =
+  "Anu Tour and Taxi | Best Tour and Taxi Service in Guwahati, Assam";
+export const META_DESCRIPTION =
+  "Anu Tour and Taxi offers the best tour and taxi services in Guwahati, Assam. We provide exceptional tour experiences in Assam, Arunachal, and Meghalaya, covering destinations like Tawang and Shillong. From planning trips to comfortable stays and guided tours, we ensure your journey is memorable. Choose Anu Tour and Taxi for an unforgettable travel experience.";
+export const META_KEYWORDS =
+  "Anu Tour and Taxi, Anu Tour and Travels, best tour service Guwahati, best taxi service Assam, tour services Assam, taxi services Guwahati, Tawang tours, Shillong tours, Assam travel guide, Arunachal travel, Meghalaya tours, Guwahati taxi service, Assam tour planning, comfortable stays Assam, guided tours Assam, group travel Assam, travel services Guwahati, Anu Tours and Taxi, Anu Tours and Travels, Anu Tour & Taxi, Anu Tour & Travels, Anu Tours & Taxi, Anu Tours & Travels, Any Tour and Taxi, Any Tour and Travels, Anu Tour Guwahati, Anu Taxi Service, Anu Travel Agency, Anu Travel Guwahati";
 export const WHATSAPP_MESSAGE = "I would like to book a taxi.";
 export const ADDRESS =
   "Maligaon, Gosala, Pub Madhabdeb Nagar, Guwahati, Assam. PIN: 781011";
