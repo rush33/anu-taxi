@@ -8,9 +8,9 @@ export const NAV_LINKS = [
 
 //CONTENT
 export const REVIEW_COUNT = 54;
-export const HERO_TITLE = "Save big with our car rental";
+export const HERO_TITLE = "Affordable Car Rentals in Guwahati – Save Big with Anu Tour and Taxi";
 export const HERO_SUBTITLE =
-  "Rent the car of your dreams. Unbeatable prices, unlimited miles, flexible pick-up options and much more.";
+"Discover the best of Arunachal Pradesh, and Meghalaya with Anu Tour and Taxi. We offer top-notch tour and taxi services in Guwahati. Explore destinations like Tawang and Shillong with ease. Choose us for an unforgettable travel experience. Satisfaction guaranteed!";
 export const WHATSAPP_MESSAGE = "I would like to book a taxi.";
 export const ADDRESS =
   "Maligaon, Gosala, Pub Madhabdeb Nagar, Guwahati, Assam. PIN: 781011";
