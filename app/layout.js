@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Anu Tours and Taxi",
+  title: "Anu Tour and Taxi",
   description: "Arunachal & Meghalaya taxi service from Guwahati",
 };
 
