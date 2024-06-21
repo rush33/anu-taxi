@@ -148,7 +148,7 @@ body {
 
   /* Hero */
   .hero-child1 {
-    @apply mt-2 md:w-1/2 flex flex-col justify-center px-2 sm:px-0;
+    @apply mt-12 md:w-1/2 flex flex-col justify-center px-2 sm:px-0;
   }
 
   .hero-child2 {
