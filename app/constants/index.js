@@ -1,5 +1,3 @@
-import { userAgent } from "next/server";
-
 // NAVIGATION
 export const NAV_LINKS = [
   { href: "/", key: "home", label: "Home" },
@@ -8,16 +6,29 @@ export const NAV_LINKS = [
   { href: "/", key: "reach_us", label: "Reach Us" },
 ];
 
+//CONTENT
 export const REVIEW_COUNT = 54;
-export const PHONE_NUMBER = 8473070328;
-export const WHATSAPP_NUMBER = 919401059304;
-export const WHATSAPP_MESSAGE = "I would like to book a taxi.";
-export const INSTAGRAM = "https://www.instagram.com/anutourandtaxi";
-export const HERO_TITLE = "Save big with our car rental";
+export const HERO_TITLE =
+  "Affordable Car Rentals in Guwahati – Save Big with Anu Tour and Taxi";
 export const HERO_SUBTITLE =
-  "Rent the car of your dreams. Unbeatable prices, unlimited miles, flexible pick-up options and much more.";
+  "Discover the best of Arunachal Pradesh, and Meghalaya with Anu Tour and Taxi. We offer top-notch tour and taxi services in Guwahati. Explore destinations like Tawang and Shillong with ease. Choose us for an unforgettable travel experience. Satisfaction guaranteed!";
+export const META_TITLE =
+  "Anu Tour and Taxi | Best Tour and Taxi Service in Guwahati, Assam";
+export const META_DESCRIPTION =
+  "Anu Tour and Taxi offers the best tour and taxi services in Guwahati, Assam. We provide exceptional tour experiences in Assam, Arunachal, and Meghalaya, covering destinations like Tawang and Shillong. From planning trips to comfortable stays and guided tours, we ensure your journey is memorable. Choose Anu Tour and Taxi for an unforgettable travel experience.";
+export const META_KEYWORDS =
+  "Anu Tour and Taxi, Anu Tour and Travels, best tour service Guwahati, best taxi service Assam, tour services Assam, taxi services Guwahati, Tawang tours, Shillong tours, Assam travel guide, Arunachal travel, Meghalaya tours, Guwahati taxi service, Assam tour planning, comfortable stays Assam, guided tours Assam, group travel Assam, travel services Guwahati, Anu Tours and Taxi, Anu Tours and Travels, Anu Tour & Taxi, Anu Tour & Travels, Anu Tours & Taxi, Anu Tours & Travels, Any Tour and Taxi, Any Tour and Travels, Anu Tour Guwahati, Anu Taxi Service, Anu Travel Agency, Anu Travel Guwahati";
+export const WHATSAPP_MESSAGE = "I would like to book a taxi.";
 export const ADDRESS =
   "Maligaon, Gosala, Pub Madhabdeb Nagar, Guwahati, Assam. PIN: 781011";
+
+// NUMBERS
+export const PHONE_NUMBER = 8473070328;
+export const WHATSAPP_NUMBER = 919401059304;
+
+// LINKS
+export const INSTAGRAM = "https://www.instagram.com/anutourandtaxi";
+export const GOOGLE_MAPS = "https://maps.app.goo.gl/xqDCkgRgWr3Ko16b6";
 export const GOOGLE_MAPS_REVIEW =
   "https://www.google.com/maps/place/Anu+Tour+and+Taxi+Guwahati+Assam+Tawang+Shillong+Kaziranga/@26.1439863,91.6908423,17z/data=!4m8!3m7!1s0x375a5ba25e1a274b:0xcfd2a2a9fc282955!8m2!3d26.1439815!4d91.6934226!9m1!1b1!16s%2Fg%2F11tjmg0jtd?entry=ttu";
 
@@ -49,24 +60,6 @@ export const REVIEWS = [
   },
 ];
 
-export const FOOTER_LINKS = [
-  {
-    title: "Learn More",
-    links: [
-      "About Hilink",
-      "Press Releases",
-      "Environment",
-      "Jobs",
-      "Privacy Policy",
-      "Contact Us",
-    ],
-  },
-  {
-    title: "Our Community",
-    links: ["Climbing xixixi", "Hiking hilink", "Hilink kinthill"],
-  },
-];
-
 export const FOOTER_CONTACT_INFO = {
   title: "Contact Us",
   links: [
@@ -83,14 +76,16 @@ export const SOCIALS = {
   title: "Social",
   sites: [
     {
-      link: "/instagram.svg",
+      icon: "/instagram-colored.svg",
       href: INSTAGRAM,
     },
     {
-      link: "/whatsapp.svg",
+      icon: "/whatsapp-colored.svg",
       href: `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`,
+    },
+    {
+      icon: "/google-maps-colored.svg",
+      href: GOOGLE_MAPS,
     },
   ],
 };
-
-// ## SSS SAFETY SECURITY SUSTAINABILITY

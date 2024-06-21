@@ -6,8 +6,8 @@ import { FOOTER_CONTACT_INFO, SOCIALS } from "../constants";
 const Footer = () => {
   return (
     <footer className="flexCenter mb-24">
-      <div className="padding-container max-container flex w-full flex-col gap-14">
-        <div className=" flex flex-col items-start justify-center gap-[10%] md:flex-row">
+    <div className="padding-container max-container flex w-full flex-col gap-14">
+        <div className="flex flex-col items-start justify-center gap-[10%] md:flex-row">
           <div className="flex flex-wrap gap-6 sm:justify-between md:flex-1">
             <div className="rounded-2xl overflow-hidden">
               <iframe
@@ -20,30 +20,33 @@ const Footer = () => {
             <div className="flex flex-col gap-5">
               <FooterColumn title={FOOTER_CONTACT_INFO.title}>
                 {FOOTER_CONTACT_INFO.links.map((link) => (
-                  <Link
-                    href="/"
+                  <div
                     key={link.label}
                     className="flex gap-4 md:flex-col lg:flex-row"
                   >
                     <p className="whitespace-nowrap">{link.label}:</p>
-                    <p className="medium-14 whitespace-nowrap text-blue-70">
-                      {link.value}
+                    <p className="medium-14 break-words w-full text-blue-70">
+                      {link.label === "Email" ? (
+                        <a href={`mailto:${link.value}`}>{link.value}</a>
+                      ) : (
+                        link.value
+                      )}
                     </p>
-                  </Link>
+                  </div>
                 ))}
               </FooterColumn>
             </div>
 
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col">
               <FooterColumn title={SOCIALS.title}>
                 <ul className="regular-14 flex gap-4 text-gray-30">
                   {SOCIALS.sites.map((site) => (
-                    <Link href={site.href} key={site.link}>
+                    <Link href={site.href} key={site.link} target="_blank">
                       <Image
-                        src={site.link}
+                        src={site.icon}
                         alt="logo"
-                        width={24}
-                        height={24}
+                        width={30}
+                        height={30}
                       />
                     </Link>
                   ))}
