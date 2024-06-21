@@ -2,38 +2,36 @@
 
 import Image from "next/image";
 import Button from "./Button";
-import { HERO_SUBTITLE, HERO_TITLE, PHONE_NUMBER, REVIEW_COUNT, WHATSAPP_MESSAGE, WHATSAPP_NUMBER } from "../constants";
+import {
+  HERO_SUBTITLE,
+  HERO_TITLE,
+  PHONE_NUMBER,
+  REVIEW_COUNT,
+  WHATSAPP_MESSAGE,
+  WHATSAPP_NUMBER,
+} from "../constants";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import AliceCarousel from "react-alice-carousel";
 
 const Hero = () => {
-  var settings = {
-    dots: true,
-    lazyLoad: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    initialSlide: 1,
-  };
+  const items = [
+    "/1.jpeg",
+    "/2.jpeg",
+    "/3.jpeg",
+    "/4.jpeg",
+    "/5.jpeg",
+    "/6.jpeg",
+    "/5.jpeg",
+  ];
 
   return (
-    <section className="max-container padding-container flex flex-col gap-20 py-10 pb-32 md:gap-28 lg:py-20 xl:flex-row">
-      <div className="hero-map" />
-      <div className="relative z-20 flex flex-1 flex-col xl:w-1/2">
-        {/* <Image
-          className="absolute left-[-5px] top-[-30px] w-10 lg:w-[50px] "
-          src="/camp.svg"
-          alt="camp"
-          width={50}
-          height={50}
-        /> */}
-
+    <section className="max-container padding-container flex flex-col md:gap-28 xl:flex-row">
+      <div className="hero-child1">
         <h1 className="bold-32 lg:bold-52">{HERO_TITLE}</h1>
         <p className="regular-16 mt-6 text-gray-30 xl:max-w-[520px]">
           {HERO_SUBTITLE}
         </p>
-
         <div className="my-11 flex flex-wrap gap-5">
           <div className="flex items-center gap-2">
             {Array(5)
@@ -55,89 +53,58 @@ const Hero = () => {
               Excellent Reviews
             </span>
           </p>
-        </div>
 
-        <div className="flex flex-col w-full gap-3 sm:flex-row">
-          <Button
-            title="Call Now"
-            icon="/call.svg"
-            type="button"
-            variant="btn_green"
-            onClick={() => (window.location.href = `tel:${PHONE_NUMBER}`)}
-          />
+          <div className="flex flex-col w-full gap-3 sm:flex-row">
+            <Button
+              title="Call Now"
+              icon="/call.svg"
+              type="button"
+              variant="btn_green"
+              onClick={() => (window.location.href = `tel:${PHONE_NUMBER}`)}
+            />
 
-          <Button
-            title="WhatsApp"
-            icon="/whatsapp-green.svg"
-            type="button"
-            variant="btn_white"
-            onClick={() =>
-              window.open(
-                `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`,
-                "_blank"
-              )
-            }
-          />
+            <Button
+              title="WhatsApp"
+              icon="/whatsapp-green.svg"
+              type="button"
+              variant="btn_white"
+              onClick={() =>
+                window.open(
+                  `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`,
+                  "_blank"
+                )
+              }
+            />
 
-          {/* <IconButton icon="/whatsapp.svg" type="button" /> */}
+            {/* <IconButton icon="/whatsapp.svg" type="button" /> */}
+          </div>
         </div>
+      </div>
 
-        {/*TODO: Photos Carousel */}
-
-        {/* <div className="">
-          <Image
-            src="/1.jpeg"
-            alt="photos"
-            width={300}
-            height={300}
-            objectFit="cover"
-          />
-        </div>
-        <div>
-          <Image
-            src="/2.jpeg"
-            alt="photos"
-            width={300}
-            height={300}
-            objectFit="cover"
-          />
-        </div>
-        <div>
-          <Image
-            src="/3.jpeg"
-            alt="photos"
-            width={300}
-            height={300}
-            objectFit="cover"
-          />
-        </div>
-        <div>
-          <Image
-            src="/4.jpeg"
-            alt="photos"
-            width={300}
-            height={300}
-            objectFit="cover"
-          />
-        </div>
-        <div>
-          <Image
-            src="/5.jpeg"
-            alt="photos"
-            width={300}
-            height={300}
-            objectFit="cover"
-          />
-        </div>
-        <div>
-          <Image
-            src="/6.jpeg"
-            alt="photos"
-            width={300}
-            height={300}
-            objectFit="cover"
-          />
-        </div> */}
+      <div className="flexCenter w-full lg:w-2/5">
+        <AliceCarousel
+          mouseTracking
+          infinite
+          autoPlayInterval={1500}
+          animationDuration={2000}
+          disableButtonsControls
+          autoPlay
+          items={items.map((src) => (
+            <div
+              key={src}
+              className="flex items-center justify-center carousel-item mx-4"
+            >
+              <Image
+                src={src}
+                alt="anu tour and taxi"
+                width={500}
+                height={500}
+                className="rounded-3xl"
+              />
+            </div>
+          ))}
+          controlsStrategy="alternate"
+        />
       </div>
     </section>
   );
