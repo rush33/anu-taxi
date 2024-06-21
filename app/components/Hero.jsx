@@ -22,7 +22,6 @@ const Hero = () => {
     "/4.jpeg",
     "/5.jpeg",
     "/6.jpeg",
-    "/5.jpeg",
   ];
 
   return (
