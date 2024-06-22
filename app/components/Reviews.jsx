@@ -8,7 +8,7 @@ import Slider from "react-slick";
 
 const ReviewCard = ({ content, username }) => {
   return (
-    <div className=" bg-green-50 p-8 lg:max-w-[450px] xl:max-w-[734px] xl:rounded-5xl xl:px-14 xl:py-16 w-full relative overflow-hidden rounded-3xl">
+    <div className=" bg-green-50 p-8 lg:max-w-[450px] xl:max-w-[734px] xl:rounded-5xl xl:p-12 w-full relative overflow-hidden rounded-3xl">
       <div className="flexCenter flex items-center gap-3 mb-3">
         {Array(5)
           .fill(1)
@@ -91,8 +91,8 @@ const Reviews = () => {
       <div className="mx-auto p-10 max-w-[133rem]">
         <div className="flex flex-col">
           <div className="text-center text-black">
-            <h3 className="regular-20">Reviewed by People</h3>
-            <h2 className="bold-40">Client's Testimonials</h2>
+            <h3 className="regular-16 lg:regular-20">Reviewed by People</h3>
+            <h2 className="bold-32 lg:bold-40">Client's Testimonials</h2>
           </div>
         </div>
       </div>
