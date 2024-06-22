@@ -148,11 +148,15 @@ body {
 
   /* Hero */
   .hero-child1 {
-    @apply flex flex-col justify-center mt-8 lg:w-1/2 lg:mt-10
+    @apply flex flex-col justify-center mt-8 lg:w-1/2 lg:mt-10;
   }
 
   .hero-child2 {
     @apply flex items-center justify-center;
+  }
+
+  .camp-quote {
+    @apply absolute -right-6 bottom-4 w-[140px] lg:bottom-10 xl:-right-8 xl:w-[186px] 3xl:right-0;
   }
 }
 
