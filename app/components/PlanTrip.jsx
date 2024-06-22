@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { planTripData } from "../constants";
 
 const PlanTrip = () => {
   return (
@@ -11,33 +12,14 @@ const PlanTrip = () => {
             <h2 className="bold-32 lg:bold-40">Quick & easy car rental</h2>
           </div>
 
-          <div className=" grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-auto mt-14 md:gap-y-8 sm:mt-4">
-            <div className="plan-trip">
-              <Image src="/icon2.png" alt="icon_img" height={150} width={150} />
-              <h3 className="bold-20 lg:bold-22">Contact Operator</h3>
-              <p className="regular-14 lg:regular-16">
-                Our knowledgeable and friendly operators are always ready to
-                help with any questions or concerns
-              </p>
-            </div>
-
-            <div className="plan-trip">
-              <Image src="/icon1.png" alt="icon_img" height={150} width={150} />
-              <h3 className="bold-20 lg:bold-22">Select Car</h3>
-              <p className="regular-14 lg:regular-16">
-                We offer a big range of vehicles for all your driving needs. We
-                have the perfect car to meet your needs
-              </p>
-            </div>
-
-            <div className="plan-trip">
-              <Image src="/icon3.png" alt="icon_img" height={150} width={150} />
-              <h3 className="bold-20 lg:bold-22">Let's Drive</h3>
-              <p className="regular-14 lg:regular-16">
-                Whether you're hitting the open road, we've got you covered with
-                our wide range of cars
-              </p>
-            </div>
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-auto mt-14 md:gap-y-8 sm:mt-4">
+            {planTripData.map((item) => (
+              <div key={item.id} className="plan-trip">
+                <Image src={item.src} alt={item.alt} height={150} width={150} />
+                <h3 className="bold-20 lg:bold-22">{item.title}</h3>
+                <p className="regular-14 lg:regular-16">{item.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

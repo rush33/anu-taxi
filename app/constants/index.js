@@ -21,6 +21,32 @@ export const META_KEYWORDS =
 export const WHATSAPP_MESSAGE = "I would like to book a taxi.";
 export const ADDRESS =
   "Maligaon, Gosala, Pub Madhabdeb Nagar, Guwahati, Assam. PIN: 781011";
+export const planTripData = [
+  {
+    id: 1,
+    src: "/icon2.png",
+    alt: "Anu Tour and Taxi Guwahati Contact Operator Icon",
+    title: "Contact Operator",
+    description:
+      "Our knowledgeable and friendly operators are always ready to help with any questions or concerns",
+  },
+  {
+    id: 2,
+    src: "/icon1.png",
+    alt: "Anu Tour and Taxi Guwahati Select Car Icon",
+    title: "Select Car",
+    description:
+      "We offer a big range of vehicles for all your driving needs. We have the perfect car to meet your needs",
+  },
+  {
+    id: 3,
+    src: "/icon3.png",
+    alt: "Anu Tour and Taxi Guwahati Let's Drive Icon",
+    title: "Let's Drive",
+    description:
+      "Whether you're hitting the open road, we've got you covered with our wide range of cars",
+  },
+];
 
 // NUMBERS
 export const PHONE_NUMBER = 8473070328;
