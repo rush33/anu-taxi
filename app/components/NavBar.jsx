@@ -1,49 +1,105 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
-import { NAV_LINKS, PHONE_NUMBER } from "../constants";
-import Button from "./Button";
+import React, { useState } from "react";
+import Image from "next/image";
+import { CSSTransition } from "react-transition-group";
 
 const NavBar = () => {
-  return (
-    <nav className="flexBetween max-container padding-container relative z-30 py-5">
-      <Link href="/" className="bold-20">
-        Anu Tour & Taxi
-      </Link>
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-      <ul className="hidden h-full gap-12 lg:flex">
-        {NAV_LINKS.map((link) => (
-          <Link
-            href={link.href}
-            key={link.key}
-            className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold"
-          >
-            {link.label}
-          </Link>
-        ))}
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setIsMenuOpen(false); // Close the menu when a link is clicked
+    }
+  };
+
+  return (
+    <nav className="flexBetween max-container relative z-30 pt-2">
+      <div className="flex items-center p-4 md:p-8">
+        <Image src="/logo-small.png" alt="Logo" width={40} height={40} />
+        <Link href="/" className="bold-20 ml-2">
+          Anu Tour and Taxi
+        </Link>
+      </div>
+
+      <ul className="hidden lg:flex h-full gap-12 p-4 md:p-8">
+        <li
+          className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold"
+          onClick={() => handleScroll("home")}
+        >
+          Home
+        </li>
+        <li
+          className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold"
+          onClick={() => handleScroll("plantrip")}
+        >
+          Cars
+        </li>
+        <li
+          className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold"
+          onClick={() => handleScroll("reviews")}
+        >
+          Reviews
+        </li>
+        <li
+          className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold"
+          onClick={() => handleScroll("footer")}
+        >
+          Reach Us
+        </li>
       </ul>
 
-      <div className="lg:flexCenter hidden">
-        <Button
-          type="button"
-          title="Book A Ride"
-          icon="/call.svg"
-          variant="btn_dark_green"
-          onClick={() => (window.location.href = `tel:${PHONE_NUMBER}`)}
+      <div className="lg:hidden flex items-center p-4 md:p-8">
+        <Image
+          src={isMenuOpen ? "/close.svg" : "/menu.svg"}
+          alt="menu"
+          width={32}
+          height={32}
+          className="inline-block cursor-pointer"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
         />
       </div>
+
+      <CSSTransition
+        in={isMenuOpen}
+        timeout={300}
+        classNames="menu"
+        unmountOnExit
+      >
+        <div className="absolute top-16 right-0 bg-white shadow-lg rounded-lg w-full lg:hidden">
+          <ul className="flex flex-col items-center py-4">
+            <li
+              className="regular-16 text-gray-50 flexCenter cursor-pointer py-2 transition-all hover:font-bold"
+              onClick={() => handleScroll("home")}
+            >
+              Home
+            </li>
+            <li
+              className="regular-16 text-gray-50 flexCenter cursor-pointer py-2 transition-all hover:font-bold"
+              onClick={() => handleScroll("plantrip")}
+            >
+              Cars
+            </li>
+            <li
+              className="regular-16 text-gray-50 flexCenter cursor-pointer py-2 transition-all hover:font-bold"
+              onClick={() => handleScroll("reviews")}
+            >
+              Reviews
+            </li>
+            <li
+              className="regular-16 text-gray-50 flexCenter cursor-pointer py-2 transition-all hover:font-bold"
+              onClick={() => handleScroll("footer")}
+            >
+              Reach Us
+            </li>
+          </ul>
+        </div>
+      </CSSTransition>
     </nav>
   );
 };
 
 export default NavBar;
-
-//       Hamburger Menu
-//       <Image
-//         src="menu.svg"
-//         alt="menu"
-//         width={32}
-//         height={32}
-//         className="inline-block cursor-pointer lg:hidden"
-//       /> 

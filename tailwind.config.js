@@ -8,22 +8,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        green: {
-          50: "#30AF5B",
-          90: "#292C27",
-        },
+        primary: "#a8e063",
+        secondary: "#56ab2f",
         gray: {
           10: "#EEEEEE",
           20: "#A2A2A2",
           30: "#7B7B7B",
           50: "#585858",
-          90: "#141414",
+          70: "#021639",
+          90: "#141414", // Define gray-90 color here
         },
         orange: {
           50: "#FF814C",
-        },
-        blue: {
-          70: "#021639",
         },
         yellow: {
           50: "#FEC601",
@@ -46,6 +42,18 @@ module.exports = {
       },
       borderRadius: {
         "5xl": "40px",
+      },
+      keyframes: {
+        gradient: {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
+      },
+      animation: {
+        gradient: "gradient 10s ease infinite",
+      },
+      backgroundSize: {
+        "200%": "200%",
       },
     },
   },
