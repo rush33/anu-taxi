@@ -1,10 +1,7 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import { META_DESCRIPTION, META_KEYWORDS, META_TITLE } from "./constants";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: { META_TITLE },
