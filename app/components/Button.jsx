@@ -10,8 +10,8 @@ const Button = ({ type, title, icon, variant, onClick, iconFirst = true }) => {
       {icon &&
         (iconFirst ? (
           <div className="flex items-center gap-x-2">
-            <p className="bold-16 whitespace-nowrap">{title}</p>
             <Image src={icon} alt={title} width={24} height={24} />
+            <p className="bold-16 whitespace-nowrap">{title}</p>
           </div>
         ) : (
           <div className="flex items-center gap-x-2">

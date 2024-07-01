@@ -51,11 +51,11 @@ const Reviews = () => {
 
   return (
     <section id="reviews" className="max-container bg-white pb-14">
-      <div className="mx-auto pt-10 max-w-[133rem]">
+      <div className="mx-auto p-10 max-w-[133rem]">
         <div className="flex flex-col">
           <div className="text-center text-black">
-            <h3 className="regular-16 lg:regular-20">Reviewed by Tourists</h3>
-            <h2 className="bold-32 lg:bold-40">Traveler Tales</h2>
+            <h3 className="text-base lg:text-2xl">Reviewed by Tourists</h3>
+            <h2 className="font-bold text-3xl sm:text-5xl">Traveler Tales</h2>
           </div>
         </div>
       </div>
