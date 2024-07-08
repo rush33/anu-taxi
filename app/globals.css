@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+@import "react-alice-carousel/lib/alice-carousel.css";
 
 @tailwind base;
 @tailwind components;
@@ -11,7 +12,7 @@
 }
 
 body {
-  font-family: Inter;
+  font-family: "Poppins", "Arial", "Helvetica", sans-serif;
 }
 
 .slick-slide > div {
@@ -25,20 +26,40 @@ body {
 }
 
 @layer utilities {
-  .btn_white {
-    @apply border-gray-20 bg-white px-8 py-3 text-green-50;
-  }
   .btn_white_text {
-    @apply border-white bg-white px-8 py-3 text-gray-90;
+    @apply border-white bg-white px-8 py-3 text-gray-90 rounded-2xl;
   }
-  .btn_green {
-    @apply border-green-50 bg-green-50 px-8 py-5 text-white;
+
+  .btn_white_ring {
+    @apply border-white bg-white px-8 py-3 text-gray-90 rounded-2xl ring-1 ring-opacity-50;
+    @apply ring-[var(--tw-ring-color)] ring-opacity-[var(--tw-ring-opacity, 0.5)];
+    --tw-ring-color: theme("colors.primary");
   }
-  .btn_dark_green {
-    @apply bg-green-90 px-8 py-4 text-white transition-all hover:bg-black;
+
+  .btn_grad {
+    @apply text-white px-8 py-5 bg-200% animate-gradient rounded-2xl;
+    background-image: linear-gradient(
+      to right,
+      #a8e063 0%,
+      #56ab2f 51%,
+      #a8e063 100%
+    );
+    box-shadow: 0 0 20px #eee;
+    transition: background-position 0.5s;
   }
-  .btn_dark_green_outline {
-    @apply border-gray-20 bg-green-90 px-8 py-5 text-white;
+
+  .btn_grad:hover {
+    background-position: right center;
+  }
+
+  .review-card-gradient {
+    @apply bg-200% animate-gradient;
+    background-image: linear-gradient(
+      to right,
+      #a8e063 0%,
+      #56ab2f 51%,
+      #a8e063 100%
+    );
   }
 
   .max-container {
@@ -146,24 +167,21 @@ body {
   }
 
   /* Hero */
-  .hero-map {
-    @apply absolute right-0 top-0 h-screen w-screen bg-pattern-2 bg-cover bg-center md:-right-28 xl:-top-60;
+  .hero-child1 {
+    @apply flex flex-col justify-center mt-8 lg:w-1/2 lg:mt-10;
   }
 
-  /* Camp */
+  .hero-child2 {
+    @apply flex items-center justify-center;
+  }
+
   .camp-quote {
     @apply absolute -right-6 bottom-4 w-[140px] lg:bottom-10 xl:-right-8 xl:w-[186px] 3xl:right-0;
   }
+}
 
-  /* Feature */
-  .feature-phone {
-    @apply absolute top-[13%] z-10 hidden max-w-[1500px] rotate-[15deg] md:-left-16 lg:flex  3xl:left-20;
-  }
-
-  /* Get App */
-  .get-app {
-    @apply max-container relative flex w-full  flex-col justify-between gap-32 overflow-hidden bg-green-90 bg-pattern bg-cover bg-center bg-no-repeat px-6 py-12 text-white sm:flex-row sm:gap-12 sm:py-24 lg:px-20 xl:max-h-[598px] 2xl:rounded-5xl;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -175,4 +193,22 @@ body {
 .hide-scrollbar {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+.menu-enter {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+.menu-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.menu-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.menu-exit-active {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 300ms, transform 300ms;
 }

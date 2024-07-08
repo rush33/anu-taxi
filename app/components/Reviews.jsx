@@ -2,50 +2,13 @@
 
 import Image from "next/image";
 import React from "react";
-import { REVIEWS } from "./../constants/index";
+import { GOOGLE_MAPS_REVIEW, REVIEWS } from "./../constants/index";
 import Button from "./Button";
-import Slider from "react-slick";
-
-const ReviewCard = ({ content, username }) => {
-  return (
-    <div className=" bg-green-50 p-8 lg:max-w-[450px] xl:max-w-[734px] xl:rounded-5xl xl:px-14 xl:py-16 w-full relative overflow-hidden rounded-3xl">
-      <div className="flexCenter flex items-center gap-3 mb-3">
-        {Array(5)
-          .fill(1)
-          .map((_, index) => (
-            <Image
-              src="/star.svg"
-              key={index}
-              alt="star"
-              width={24}
-              height={24}
-            />
-          ))}
-      </div>
-      <p className="regular-16 xl:regular-16  text-white">{content}</p>
-      <Image
-        src="/quote.svg"
-        alt="quote"
-        width={186}
-        height={219}
-        className="camp-quote"
-      />
-      <div className="flexCenter mt-3">
-        <Image
-          src={`/${username}.png`}
-          alt="Client Avatar"
-          className="rounded-full mr-2"
-          width={50}
-          height={50}
-        />
-        <p className="bold-20 text-white">{username}</p>
-      </div>
-    </div>
-  );
-};
+import AliceCarousel from "react-alice-carousel";
+import ReviewCard from "./ReviewCard";
 
 const Reviews = () => {
-  var settings = {
+  const settings = {
     dots: true,
     infinite: false,
     speed: 500,
@@ -56,7 +19,7 @@ const Reviews = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
           initialSlide: 0,
           infinite: true,
@@ -87,39 +50,51 @@ const Reviews = () => {
   };
 
   return (
-    <section className="max-container bg-white py-10">
+    <section id="reviews" className="max-container bg-white pb-14">
       <div className="mx-auto p-10 max-w-[133rem]">
         <div className="flex flex-col">
           <div className="text-center text-black">
-            <h3 className="regular-20">Reviewed by People</h3>
-            <h2 className="bold-40">Client's Testimonials</h2>
+            <h3 className="text-base lg:text-2xl">Reviewed by Tourists</h3>
+            <h2 className="font-bold text-3xl sm:text-5xl">Traveler Tales</h2>
           </div>
         </div>
       </div>
-      {/* <div className="flex flex-col lg:flex-row"> */}
-      <Slider {...settings}>
-        {REVIEWS.map((item, index) => (
+      <AliceCarousel
+        mouseTracking
+        infinite
+        autoPlayInterval={2000}
+        animationDuration={3000}
+        disableButtonsControls
+        autoPlay
+        responsive={{
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 2,
+          },
+          1024: {
+            items: 2,
+          },
+        }}
+        items={REVIEWS.map((item, index) => (
           <ReviewCard
             key={index}
-            f
             content={item.content}
             username={item.username}
           />
         ))}
-      </Slider>
-      {/* </div> */}
+        controlsStrategy="alternate"
+      />
+      <br />
       <div className="flexCenter mt-6">
         <Button
-          title="Check out all reviews"
-          icon="/right-arrow.svg"
+          title="Find out more in "
+          icon="/google-maps-colored.svg"
           type="button"
-          variant="btn_white_text"
-          onClick={() =>
-            window.open(
-              "https://www.google.com/maps/place/Anu+Tour+and+Taxi+Guwahati+Assam+Tawang+Shillong+Kaziranga/@26.1439863,91.6908423,17z/data=!4m8!3m7!1s0x375a5ba25e1a274b:0xcfd2a2a9fc282955!8m2!3d26.1439815!4d91.6934226!9m1!1b1!16s%2Fg%2F11tjmg0jtd?entry=ttu",
-              "_blank"
-            )
-          }
+          variant="btn_white_text ring-1 ring-opacity-50 ring-green-500"
+          iconFirst={false}
+          onClick={() => window.open(GOOGLE_MAPS_REVIEW, "_blank")}
         />
       </div>
     </section>
