@@ -30,7 +30,7 @@ export const ADDRESS =
 export const CARS = [
   {
     id: 1,
-    src: "/swift_dzire.jpg",
+    src: "/cars/swift_dzire.jpg",
     alt: "Swift Dzire",
     title: "Swift Dzire",
     description:
@@ -38,7 +38,7 @@ export const CARS = [
   },
   {
     id: 2,
-    src: "/toyota_innova.jpg",
+    src: "/cars/toyota_innova.jpg",
     alt: "Toyota Innova",
     title: "Toyota Innova",
     description:
@@ -46,7 +46,7 @@ export const CARS = [
   },
   {
     id: 3,
-    src: "/force_traveller.jpg",
+    src: "/cars/force_traveller.jpg",
     alt: "Force Traveller",
     title: "Force Traveller",
     description:
@@ -108,15 +108,15 @@ export const SOCIALS = {
   title: "Socials",
   sites: [
     {
-      icon: "/instagram-colored.svg",
+      icon: "/icons/instagram-colored.svg",
       href: INSTAGRAM,
     },
     {
-      icon: "/whatsapp-colored.svg",
+      icon: "/icons/whatsapp-colored.svg",
       href: `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`,
     },
     {
-      icon: "/google-maps-colored.svg",
+      icon: "/icons/google-maps-colored.svg",
       href: GOOGLE_MAPS,
     },
   ],

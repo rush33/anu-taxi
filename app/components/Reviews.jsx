@@ -90,7 +90,7 @@ const Reviews = () => {
       <div className="flexCenter mt-6">
         <Button
           title="Find out more in "
-          icon="/google-maps-colored.svg"
+          icon="/icons/google-maps-colored.svg"
           type="button"
           variant="btn_white_text ring-1 ring-opacity-50 ring-green-500"
           iconFirst={false}

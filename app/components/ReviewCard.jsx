@@ -10,7 +10,7 @@ const ReviewCard = ({ content, username }) => {
             .fill(1)
             .map((_, index) => (
               <Image
-                src="/star.svg"
+                src="/icons/star.svg"
                 key={index}
                 alt="star"
                 width={24}
@@ -21,7 +21,7 @@ const ReviewCard = ({ content, username }) => {
         <p className="regular-16 xl:regular-16 text-white">{content}</p>
       </div>
       <Image
-        src="/travel.svg"
+        src="/icons/travel.svg"
         alt="quote"
         width={186}
         height={219}
@@ -29,7 +29,7 @@ const ReviewCard = ({ content, username }) => {
       />
       <div className="flexCenter mt-3">
         <Image
-          src={`/${username}.png`}
+          src={`/reviews/${username}.png`}
           alt="Client Avatar"
           className="rounded-full mr-2"
           width={50}
