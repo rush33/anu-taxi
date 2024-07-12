@@ -10,16 +10,23 @@ import Subtitle from "./Subtitle";
 import Title from "./Title";
 
 import { PHONE_NUMBER, WHATSAPP_MESSAGE, WHATSAPP_NUMBER } from "../constants";
+import images from "../images.json";
 
 const Hero = () => {
-  const items = [
-    "/images/1.jpeg",
-    "/images/2.jpeg",
-    "/images/3.jpeg",
-    "/images/4.jpeg",
-    "/images/5.jpeg",
-    "/images/6.jpeg",
-  ];
+  const items = images.map((src, index) => (
+    <div
+      key={index}
+      className="flex items-center justify-center carousel-item mx-4"
+    >
+      <Image
+        src={src}
+        alt={`image-${index}`}
+        width={500}
+        height={500}
+        className="rounded-2xl"
+      />
+    </div>
+  ));
 
   return (
     <section
@@ -62,20 +69,7 @@ const Hero = () => {
           animationDuration={2000}
           disableButtonsControls
           autoPlay
-          items={items.map((src) => (
-            <div
-              key={src}
-              className="flex items-center justify-center carousel-item mx-4"
-            >
-              <Image
-                src={src}
-                alt="anu tour and taxi"
-                width={500}
-                height={500}
-                className="rounded-2xl"
-              />
-            </div>
-          ))}
+          items={items}
           controlsStrategy="alternate"
         />
       </div>
