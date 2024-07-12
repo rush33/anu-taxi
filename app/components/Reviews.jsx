@@ -8,47 +8,6 @@ import AliceCarousel from "react-alice-carousel";
 import ReviewCard from "./ReviewCard";
 
 const Reviews = () => {
-  const settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 0,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 0,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 0,
-          infinite: true,
-          dots: true,
-        },
-      },
-    ],
-  };
-
   return (
     <section id="reviews" className="max-container bg-white pb-14">
       <div className="mx-auto p-10 max-w-[133rem]">
