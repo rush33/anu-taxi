@@ -19,7 +19,7 @@ const NavBar = () => {
   return (
     <nav className="flexBetween max-container relative z-30 pt-2">
       <div className="flex items-center p-4 md:p-8">
-        <Image src="/logo-small.png" alt="Logo" width={40} height={40} />
+        <Image src="/icons/logo-small.png" alt="Logo" width={40} height={40} />
         <Link href="/" className="bold-20 ml-2">
           Anu Tour and Taxi
         </Link>
@@ -54,7 +54,7 @@ const NavBar = () => {
 
       <div className="lg:hidden flex items-center p-4 md:p-8">
         <Image
-          src={isMenuOpen ? "/close.svg" : "/menu.svg"}
+          src={isMenuOpen ? "/icons/close.svg" : "/icons/menu.svg"}
           alt="menu"
           width={32}
           height={32}

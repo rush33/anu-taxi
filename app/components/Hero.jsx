@@ -10,16 +10,23 @@ import Subtitle from "./Subtitle";
 import Title from "./Title";
 
 import { PHONE_NUMBER, WHATSAPP_MESSAGE, WHATSAPP_NUMBER } from "../constants";
+import images from "../images.json";
 
 const Hero = () => {
-  const items = [
-    "/1.jpeg",
-    "/2.jpeg",
-    "/3.jpeg",
-    "/4.jpeg",
-    "/5.jpeg",
-    "/6.jpeg",
-  ];
+  const items = images.map((src, index) => (
+    <div
+      key={index}
+      className="flex items-center justify-center carousel-item mx-4"
+    >
+      <Image
+        src={src}
+        alt={`image-${index}`}
+        width={500}
+        height={500}
+        className="rounded-2xl"
+      />
+    </div>
+  ));
 
   return (
     <section
@@ -35,14 +42,14 @@ const Hero = () => {
         <div className="mt-4 flex flex-col md:flex-row gap-2">
           <Button
             title="Call Now"
-            icon="/call.svg"
+            icon="/icons/call.svg"
             type="button"
             variant="btn_grad w-full md:w-1/2"
             onClick={() => (window.location.href = `tel:${PHONE_NUMBER}`)}
           />
           <Button
             title="WhatsApp"
-            icon="/whatsapp-green.svg"
+            icon="/icons/whatsapp-green.svg"
             type="button"
             variant="btn_white_text w-full md:w-1/2 ring-1 ring-opacity-50 ring-green-500"
             onClick={() =>
@@ -62,20 +69,7 @@ const Hero = () => {
           animationDuration={2000}
           disableButtonsControls
           autoPlay
-          items={items.map((src) => (
-            <div
-              key={src}
-              className="flex items-center justify-center carousel-item mx-4"
-            >
-              <Image
-                src={src}
-                alt="anu tour and taxi"
-                width={500}
-                height={500}
-                className="rounded-2xl"
-              />
-            </div>
-          ))}
+          items={items}
           controlsStrategy="alternate"
         />
       </div>
