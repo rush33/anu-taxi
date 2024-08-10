@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const ReviewCard = ({ content, username }) => {
+const ReviewCard = ({ content, username, image }) => {
   return (
     <div className="review-card-gradient ml-10 mr-10 mt-8 p-4 md:p-8 lg:p-12 relative overflow-hidden rounded-2xl">
       <div>
@@ -29,7 +29,7 @@ const ReviewCard = ({ content, username }) => {
       />
       <div className="flexCenter mt-3">
         <Image
-          src={`/reviews/${username}.png`}
+          src={image}
           alt="Client Avatar"
           className="rounded-full mr-2"
           width={50}

@@ -19,6 +19,7 @@ const Button = ({ type, title, icon, variant, onClick, iconFirst = true }) => {
             <Image src={icon} alt={title} width={24} height={24} />
           </div>
         ))}
+      {!icon && <p className="bold-16 whitespace-nowrap">{title}</p>}
     </button>
   );
 };
