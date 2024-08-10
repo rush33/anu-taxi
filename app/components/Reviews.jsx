@@ -1,13 +1,36 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
-import { GOOGLE_MAPS_REVIEW, REVIEWS } from "./../constants/index";
+import React, { useState } from "react";
+import GOOGLE_MAPS_REVIEW from "./../constants/index";
 import Button from "./Button";
-import AliceCarousel from "react-alice-carousel";
+import Masonry from "react-masonry-css";
 import ReviewCard from "./ReviewCard";
 
+import reviewsData from "./../constants/reviews.json";
+
+// Convert the imported JSON data to the format needed for the ReviewCard
+const REVIEWS = reviewsData.map((item) => ({
+  username: item.name,
+  image: item.image,
+  content: item.review,
+}));
+
 const Reviews = () => {
+  const [visibleCount, setVisibleCount] = useState(8); // Number of reviews to show initially
+  const [hasMore, setHasMore] = useState(REVIEWS.length > 8); // Check if there are more reviews to load
+
+  const loadMoreReviews = () => {
+    setVisibleCount((prevCount) => {
+      const newCount = prevCount + 8; // Load more reviews in batches of 8
+      if (newCount >= REVIEWS.length) {
+        setHasMore(false); // No more reviews to load
+        return REVIEWS.length;
+      }
+      return newCount;
+    });
+  };
+
   return (
     <section id="reviews" className="max-container bg-white pb-14">
       <div className="mx-auto p-10 max-w-[133rem]">
@@ -18,37 +41,33 @@ const Reviews = () => {
           </div>
         </div>
       </div>
-      <AliceCarousel
-        mouseTracking
-        infinite
-        autoPlayInterval={2000}
-        animationDuration={3000}
-        disableButtonsControls
-        autoPlay
-        responsive={{
-          0: {
-            items: 1,
-          },
-          600: {
-            items: 2,
-          },
-          1024: {
-            items: 2,
-          },
-        }}
-        items={REVIEWS.map((item, index) => (
+      <Masonry
+        breakpointCols={{ default: 3, 1100: 2, 700: 1 }}
+        className="flex w-auto"
+        columnClassName="w-full"
+      >
+        {REVIEWS.slice(0, visibleCount).map((item, index) => (
           <ReviewCard
             key={index}
             content={item.content}
             username={item.username}
+            image={item.image}
           />
         ))}
-        controlsStrategy="alternate"
-      />
-      <br />
-      <div className="flexCenter mt-6">
+      </Masonry>
+      <div className="flex max-container items-center justify-center gap-4 mt-6">
         <Button
-          title="Find out more in "
+          title={hasMore ? "Load More" : "No More Reviews"}
+          type="button"
+          variant={`btn_white_text ring-1 ring-opacity-50 ${
+            hasMore ? "ring-green-500" : "ring-gray-300 cursor-not-allowed"
+          }`}
+          iconFirst={false}
+          onClick={hasMore ? loadMoreReviews : undefined}
+          disabled={!hasMore} // Disable button if no more reviews
+        />
+        <Button
+          title="View All in "
           icon="/icons/google-maps-colored.svg"
           type="button"
           variant="btn_white_text ring-1 ring-opacity-50 ring-green-500"
